@@ -3,10 +3,90 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Головна сторінка автосервісу Gulf Motors</title>
 </head>
 <body>
-    <h1>Hello World</h1>
-    <p>Igor Filippov</p>
+    <main>
+
+        <!-- Зображення -->
+        <section>
+            <h2>Зображення</h2>
+            <img src="Gulf Motors.jpg" alt="Зображення логотипу Gulf Motors" width="400" height="300">
+        </section>
+
+        <!-- Таблиця з послугами -->
+        <section>
+            <h2>Таблиця</h2>
+            <table>
+                <tr>
+                    <th>Послуга</th>
+                    <th>Ціна (грн)</th>
+                    <th>Опис</th>
+                </tr>
+                <tr>
+                    <td>Діагностика</td>
+                    <td>1200 грн</td>
+                    <td>Повна діагностика автомобіля з використанням сучасного обладнання.</td>
+                </tr>
+                <tr>
+                    <td>Заміна масла</td>
+                    <td>500 грн</td>
+                    <td>Швидка та якісна заміна масла для будь-яких типів авто.</td>
+                </tr>
+                <tr>
+                    <td>Ремонт двигуна</td>
+                    <td>від 2000 грн</td>
+                    <td>Професійний ремонт двигунів всіх типів.</td>
+                </tr>
+            </table>
+        </section>
+
+        <!-- Списки з перевагами та етапами обслуговування -->
+        <section>
+            <h2>Списки (нумеровані, маркіровані)</h2>
+            <h3>Переваги автосервісу Gulf Motors</h3>
+            <ul>
+                <li>Досвідчені механіки</li>
+                <li>Сучасне обладнання</li>
+                <li>Гарантія на всі види робіт</li>
+            </ul>
+
+            <h3>Етапи обслуговування</h3>
+            <ol>
+                <li>Попередній запис на обслуговування</li>
+                <li>Проведення діагностики</li>
+                <li>Погодження робіт та розрахунок вартості</li>
+                <li>Ремонт або обслуговування автомобіля</li>
+                <li>Завершення та видача автомобіля клієнту</li>
+            </ol>
+        </section>
+
+        <!-- Форма для запису на обслуговування -->
+        <section id="contact">
+            <h2>Форма</h2>
+            <form action="/submit" method="post">
+                <label for="name">Ваше ім'я:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="phone">Номер телефону:</label>
+                <input type="tel" id="phone" name="phone" required>
+                
+                <label for="service">Оберіть послугу:</label>
+                <select id="service" name="service">
+                    <option value="diagnostic">Діагностика</option>
+                    <option value="oil_change">Заміна масла</option>
+                    <option value="engine_repair">Ремонт двигуна</option>
+                </select>
+                
+                <button type="submit">Записатися</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- Підвал -->
+    <footer>
+        <p><a href="business-logic.html">Опис предметної галузі та бізнес-логіки</a></p>
+    </footer>
+
 </body>
 </html>
