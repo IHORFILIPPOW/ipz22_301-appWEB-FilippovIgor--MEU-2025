@@ -1,22 +1,261 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uk">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Головна сторінка автосервісу Gulf Motors</title>
+    <title>Gulf Motors - Автосервіс преміум-класу</title>
+    <style>
+        /* Основні стилі */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ffe4b5;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Шапка */
+        header {
+            background-color: #000;
+            color: #ffa500;
+            text-align: center;
+            padding: 1.5rem 1rem;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.8rem;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            margin: 0.5rem 0 0;
+        }
+
+        /* Навігаційне меню */
+        nav {
+            background-color: #333;
+            padding: 0.5rem;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav a {
+            color: #ffa500;
+            text-decoration: none;
+            margin: 0 1rem;
+            font-size: 1.2rem;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        nav a:hover {
+            background-color: #ffa500;
+            color: #000;
+        }
+
+        main {
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        h2 {
+            text-align: center;
+            color: #000;
+        }
+
+        section {
+            margin-bottom: 2rem;
+            padding: 1.5rem;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Таблиця послуг */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+        }
+
+        table th, table td {
+            border: 1px solid #ddd;
+            padding: 0.8rem;
+            text-align: center;
+        }
+
+        table th {
+            background-color: #ffa500;
+            color: #000;
+            font-weight: bold;
+        }
+
+        table tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        table tr:hover {
+            background-color: #f1f1f1;
+        }
+
+        /* Форма запису */
+        #contact-form form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        #contact-form label {
+            margin: 1rem 0 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        #contact-form input, 
+        #contact-form select, 
+        #contact-form button {
+            width: 80%;
+            max-width: 400px;
+            padding: 0.8rem;
+            margin-bottom: 1rem;
+            border: 2px solid #ffa500;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        #contact-form input:focus, 
+        #contact-form select:focus {
+            border-color: #333;
+            outline: none;
+        }
+
+        #contact-form button {
+            background-color: #ffa500;
+            color: #fff;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        #contact-form button:hover {
+            background-color: #333;
+            color: #ffa500;
+        }
+
+        /* Контактна інформація */
+        #contact-info {
+            text-align: center;
+            background-color: #fff;
+            padding: 1rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        #contact-info h3 {
+            color: #000;
+        }
+
+        #contact-info p {
+            font-size: 1.2rem;
+            color: #555;
+        }
+
+        /* Карусель */
+        #carousel {
+            display: flex;
+            overflow: hidden;
+            max-width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            margin-top: 1rem;
+        }
+
+        #carousel div {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+
+        #carousel img {
+            width: 100%;
+            max-width: 300px;
+        }
+
+        /* Блок з адресою */
+        #address {
+            text-align: center;
+            background-color: #333;
+            color: #ffa500;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            margin-top: 2rem;
+        }
+
+        #address h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+
+        #address p {
+            font-size: 1.2rem;
+        }
+
+        /* Стилі для зображення */
+        #about-image {
+            display: block;
+            margin: 1.5rem auto;
+            width: 50%;
+            max-width: 300px;
+            height: auto;
+            border-radius: 15px; /* Заокруглені кути */
+        }
+    </style>
 </head>
 <body>
-    <main>
+    <!-- Шапка -->
+    <header>
+        <h1>Gulf Motors</h1>
+        <p>Автосервіс преміум-класу для вашого авто</p>
+    </header>
 
-        <!-- Зображення -->
-        <section>
-            <h2>Зображення</h2>
-            <img src="Gulf Motors.jpg" alt="Зображення логотипу Gulf Motors" width="400" height="300">
+    <!-- Навігація -->
+    <nav>
+        <a href="#services">Наші послуги</a>
+        <a href="#about">Про нас</a>
+        <a href="#contact-form">Запис на обслуговування</a>
+        <a href="#contact-info">Контакти</a>
+    </nav>
+
+    <!-- Головна -->
+    <main>
+        <!-- Опис -->
+        <section id="about">
+            <h2>Про Gulf Motors</h2>
+            <img src="Gulf Motors.jpg" alt="Фото Gulf Motors" id="about-image">
+            <p>
+                Gulf Motors — ваш надійний партнер у світі автообслуговування. Ми пропонуємо повний спектр послуг із технічного обслуговування, діагностики та ремонту автомобілів.
+                Завдяки нашій професійній команді та сучасному обладнанню, ми гарантуємо високу якість робіт, прозорі ціни та максимальний комфорт для клієнтів.
+            </p>
+
+            <!-- Карусель -->
+            <div id="carousel">
+                <div>
+                    <img src="GULF Service.jpg" alt="Фото 1">
+                    <img src="GULF Service 2.jpg" alt="Фото 2">
+                    <img src="GULF Service 3.jpg" alt="Фото 3">
+                    <img src="GULF Service 4.jpg" alt="Фото 4">
+                </div>
+            </div>
         </section>
 
-        <!-- Таблиця з послугами -->
-        <section>
-            <h2>Таблиця</h2>
+        <!-- Таблиця -->
+        <section id="services">
+            <h2>Наші послуги</h2>
             <table>
                 <tr>
                     <th>Послуга</th>
@@ -25,68 +264,73 @@
                 </tr>
                 <tr>
                     <td>Діагностика</td>
-                    <td>1200 грн</td>
-                    <td>Повна діагностика автомобіля з використанням сучасного обладнання.</td>
+                    <td>1200</td>
+                    <td>Повна діагностика авто за допомогою сучасного обладнання.</td>
                 </tr>
                 <tr>
                     <td>Заміна масла</td>
-                    <td>500 грн</td>
-                    <td>Швидка та якісна заміна масла для будь-яких типів авто.</td>
+                    <td>500</td>
+                    <td>Швидка і якісна заміна масла.</td>
                 </tr>
                 <tr>
                     <td>Ремонт двигуна</td>
-                    <td>від 2000 грн</td>
-                    <td>Професійний ремонт двигунів всіх типів.</td>
+                    <td>від 2000</td>
+                    <td>Ремонт двигунів будь-якої складності.</td>
                 </tr>
             </table>
         </section>
 
-        <!-- Списки з перевагами та етапами обслуговування -->
-        <section>
-            <h2>Списки (нумеровані, маркіровані)</h2>
-            <h3>Переваги автосервісу Gulf Motors</h3>
-            <ul>
-                <li>Досвідчені механіки</li>
-                <li>Сучасне обладнання</li>
-                <li>Гарантія на всі види робіт</li>
-            </ul>
-
-            <h3>Етапи обслуговування</h3>
-            <ol>
-                <li>Попередній запис на обслуговування</li>
-                <li>Проведення діагностики</li>
-                <li>Погодження робіт та розрахунок вартості</li>
-                <li>Ремонт або обслуговування автомобіля</li>
-                <li>Завершення та видача автомобіля клієнту</li>
-            </ol>
-        </section>
-
-        <!-- Форма для запису на обслуговування -->
-        <section id="contact">
-            <h2>Форма</h2>
+        <!-- Форма -->
+        <section id="contact-form">
+            <h2>Запис на обслуговування</h2>
             <form action="/submit" method="post">
                 <label for="name">Ваше ім'я:</label>
-                <input type="text" id="name" name="name" required>
-                
+                <input type="text" id="name" name="name" placeholder="Введіть ваше ім'я" required>
+
                 <label for="phone">Номер телефону:</label>
-                <input type="tel" id="phone" name="phone" required>
-                
+                <input type="tel" id="phone" name="phone" placeholder="+380123456789" required>
+
                 <label for="service">Оберіть послугу:</label>
                 <select id="service" name="service">
                     <option value="diagnostic">Діагностика</option>
                     <option value="oil_change">Заміна масла</option>
                     <option value="engine_repair">Ремонт двигуна</option>
                 </select>
-                
+
                 <button type="submit">Записатися</button>
             </form>
         </section>
+
+        <!-- Контактна інформація -->
+        <section id="contact-info">
+            <h3>Контакти</h3>
+            <p>Телефон: 0505671718</p>
+            <p>Телефон: 0939729660</p>
+        </section>
+
+        <!-- Адреса -->
+        <section id="address">
+            <h3>Наша адреса</h3>
+            <p>М. Київ, Проспект Лобановського 5ж</p>
+        </section>
     </main>
 
-    <!-- Підвал -->
-    <footer>
-        <p><a href="business-logic.html">Опис предметної галузі та бізнес-логіки</a></p>
-    </footer>
-
+    <script>
+        // Плавна прокрутка до розділів
+        document.querySelectorAll('nav a').forEach(link => {
+            link.addEventListener('click', e => {
+                e.preventDefault();
+                const targetId = link.getAttribute('href').substring(1);
+                document.getElementById(targetId).scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            });
+        });
+    </script>
 </body>
 </html>
+
+
+       
+
